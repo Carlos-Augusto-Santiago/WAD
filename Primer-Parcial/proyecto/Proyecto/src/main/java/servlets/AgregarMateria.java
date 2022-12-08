@@ -16,74 +16,57 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author CASP_
  */
-@WebServlet(name = "Login", urlPatterns = { "/login" })
-public class Login extends HttpServlet {
+@WebServlet(name = "AgregarMateria", urlPatterns = {"/agregar-materia"})
+public class AgregarMateria extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
      *
-     * @param request  servlet request
+     * @param request servlet request
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException      if an I/O error occurs
+     * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
+        try ( PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Login</title>");
+            out.println("<title>Servlet AgregarMateria</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Ingresa a tu cuenta</h1>");
-            out.println("<a href='index.html'>Inicio</a>");
-            out.println("<br>");
-            out.println("<br>");
-            out.println("<section>");
-            out.println("<form action='home'>");
-            out.println("<label for='user-name'>Usuario: </label>");
-            out.println("<input type='text' id='user-name' name='user-name'>");
-            out.println("<br>");
-            out.println("<br>");
-            out.println("<label for='password'>Contraseña: </label>");
-            out.println("<input type='password' id='password' name='password'>");
-            out.println("<br>");
-            out.println("<br>");
-            out.println("<button type='submit'>Login</button>");
-            out.println("</form>");
-            out.println("</section>");
+            out.println("<h1>Servlet AgregarMateria at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
     }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the
-    // + sign on the left to edit the code.">
+    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
      *
-     * @param request  servlet request
+     * @param request servlet request
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException      if an I/O error occurs
+     * @throws IOException if an I/O error occurs
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-
     }
 
     /**
      * Handles the HTTP <code>POST</code> method.
      *
-     * @param request  servlet request
+     * @param request servlet request
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException      if an I/O error occurs
+     * @throws IOException if an I/O error occurs
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

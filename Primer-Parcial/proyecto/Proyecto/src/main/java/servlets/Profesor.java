@@ -39,11 +39,11 @@ public class Profesor extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Registro para profesores</h1>");
-            out.println("<a href='home'>Inicio</a>");
+            out.println("<a href='index.html'>Inicio</a>");
             out.println("<br>");
             out.println("<br>");
             out.println("<section>");
-            out.println("<form action='home'>");
+            out.println("<form action='index.html'>");
             out.println("<label for='name'>Nombre: </label>");
             out.println("<input type='text' id='name' name='name'>");
             out.println("<br>");

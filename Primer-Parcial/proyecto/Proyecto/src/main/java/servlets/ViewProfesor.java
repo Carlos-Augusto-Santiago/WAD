@@ -7,6 +7,7 @@ package servlets;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,7 +16,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author CASP_
  */
-public class Alumno extends HttpServlet {
+@WebServlet(name = "ViewProfesor", urlPatterns = { "/view-profesor" })
+public class ViewProfesor extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -30,37 +32,14 @@ public class Alumno extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Alumno</title>");
+            out.println("<title>Servlet ViewProfesor</title>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Registro para alumnos</h1>");
-            out.println("<a href='index.html'>Inicio</a>");
-            out.println("<br>");
-            out.println("<br>");
-            out.println("<section>");
-            out.println("<form action='login'>");
-            out.println("<label for='name'>Nombre del alumno: </label>");
-            out.println("<input type='text' id='name' name='name'>");
-            out.println("<br>");
-            out.println("<br>");
-            out.println("<label for='user-name'>Nombre de usuario: </label>");
-            out.println("<input type='text' id='user-name' name='user-name'>");
-            out.println("<br>");
-            out.println("<br>");
-            out.println("<label for='boleta'>Boleta del alumno: </label>");
-            out.println("<input type='number' id='boleta' name='boleta'>");
-            out.println("<br>");
-            out.println("<br>");
-            out.println("<label for='password'>Contraseña: </label>");
-            out.println("<input type='password' id='password' name='password'>");
-            out.println("<br>");
-            out.println("<br>");
-            out.println("<button type='submit'>Registrar</button>");
-            out.println("</form>");
-            out.println("</section>");
+            out.println("<h1>Servlet ViewProfesor at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -80,8 +59,18 @@ public class Alumno extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-        response.setContentType("text/html;charset=UTF-8");
-
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet ViewProfesor</title>");
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet ViewProfesor at " + request.getContextPath() + "</h1>");
+            out.println("</body>");
+            out.println("</html>");
+        }
     }
 
     /**

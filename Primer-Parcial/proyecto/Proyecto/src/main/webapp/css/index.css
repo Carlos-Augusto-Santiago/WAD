@@ -25,11 +25,13 @@ body header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
 
 body nav {
     width: 300px;
     height: 100%;
+    background-color: #c1b0d7;
 }
 
 body nav article {
@@ -37,6 +39,7 @@ body nav article {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 6rem 0;
 }
 
 body nav article ul {
@@ -49,4 +52,18 @@ body nav article h3 {
 
 body nav article ul li {
     padding: 2rem 0;
+}
+
+body main {
+    width: 100%;
+    height: 100%;
+    background-color: #c5bbd3;
+    display: flex;
+    flex-direction: row;
+}
+
+body main section {
+    width: 100%;
+    height: 100%;
+    padding: 5rem;
 }
