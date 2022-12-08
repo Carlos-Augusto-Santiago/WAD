@@ -35,10 +35,14 @@ public class Home extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Home</title>");
+            out.println("<title>Home</title>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet Home at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Plataforma para evaluar profesores</h1>");
+            out.println("<a href='consulta'>Consultar profesor</a>");
+            out.println("<br>");
+            out.println("<br>");
+            out.println("<a href='registro-profesor'>Regisitrar profesor</a>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -58,6 +62,7 @@ public class Home extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
+        
     }
 
     /**

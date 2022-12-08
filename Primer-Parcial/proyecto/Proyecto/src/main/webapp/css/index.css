@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+html,
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body nav {
+    width: 300px;
+    height: 100%;
+}
+
+body nav article {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body nav article ul {
+    list-style-type: none;
+}
+
+body nav article h3 {
+    margin-bottom: 3rem;
+}
+
+body nav article ul li {
+    padding: 2rem 0;
+}
